@@ -1,0 +1,41 @@
+{
+  "name": "tailwind-format-extension",
+  "description": "Uma extensão para formatar classes do Tailwind CSS.",
+  "version": "1.0.0",
+  "author": "GugaGuga",
+  "publisher": "GugaGuga",
+  "type": "module",
+  "main": "./src/extension.js",
+  "activationEvents": [
+    "onCommand:extension.formatTailwind",
+    "workspaceContains:.tailwindrc",
+    "workspaceContains:tailwind.config.js"
+  ],
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.formatTailwind",
+        "title": "Formatar Classe Tailwind"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "license": "MIT",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.9",
+    "prettier": "^3.0.1",
+    "typescript": "^5.1.6",
+    "vscode": "^1.1.37"
+  }
+}
